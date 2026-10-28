@@ -1,5 +1,2 @@
 #!/bin/bash
-if [ "$(ls -l hello | cut -d' ' -f3)" = "guillaume" ]
-then
-    chown vincent hello
-fi
+find hello -user guillaume -exec chown vincent {} +
